@@ -7,7 +7,7 @@ btt.addEventListener("click", function () {
 });
 let signin = document.querySelector("#sign-in");
 signin.addEventListener("click", function () {
-  window.location.href = "/HTML,CSS,JAVASCRIPT/HTML/feeproject2.html";
+  window.location.href = "/Buyers-Inn/signup.html";
 });
 
 let search=document.querySelector("#search-form");
