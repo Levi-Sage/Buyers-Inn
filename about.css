@@ -3,12 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #121212;
     color: #eeeeee;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -19,12 +21,29 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #333;
+    animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: #f1c40f;
+    transition: color 0.3s;
+}
+
+.logo:hover {
+    color: #f39c12;
 }
 
 .nav-links {
@@ -40,10 +59,37 @@ body {
     color: #ccc;
     text-decoration: none;
     font-size: 1rem;
+    transition: color 0.3s;
 }
 
+.nav-links a:hover,
 .nav-links .active {
     color: #f1c40f;
+}
+
+/* Section Animations */
+.fade-in {
+    animation: fadeIn 2s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-in-left {
+    animation: slideLeft 1.2s ease forwards;
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+@keyframes slideLeft {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /* About Section */
@@ -58,6 +104,7 @@ body {
     color: #f1c40f;
     margin-bottom: 20px;
     text-align: center;
+    text-shadow: 0 0 10px #f1c40f;
 }
 
 .about-section h2 {
@@ -65,6 +112,12 @@ body {
     margin-top: 40px;
     margin-bottom: 10px;
     color: #ffa502;
+    transition: transform 0.3s ease;
+}
+
+.about-section h2:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 8px #ffa502;
 }
 
 .about-section p {
@@ -80,24 +133,44 @@ body {
     margin-bottom: 40px;
 }
 
+/* Bullet List */
 ul {
     margin: 10px 0 30px 20px;
 }
 
 ul li {
     margin-bottom: 10px;
+    list-style: square;
+    color: #bbb;
 }
 
 /* Image */
 .image-box {
     text-align: center;
     margin: 30px 0;
+    animation: fadeInZoom 1.5s ease-out;
 }
 
 .image-box img {
     width: 80%;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Footer */
@@ -107,4 +180,5 @@ footer {
     padding: 20px 10px;
     color: #999;
     border-top: 1px solid #333;
+    animation: fadeIn 2s ease-in;
 }
