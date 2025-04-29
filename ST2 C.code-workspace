@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../ST2 C"
+		},
+		{
+			"path": "../ST3"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "BuyersInn"
+	}
+}
