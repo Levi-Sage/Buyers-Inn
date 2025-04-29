@@ -24,3 +24,16 @@ This responsive web page is designed to showcase featured products, attract cust
 - **Google Fonts** & **FontAwesome** – Typography and icons  
 
 ---
+
+---
+
+## 🚀 How to Run Locally
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/BuyersInn.git
+   cd BuyersInn
+2. Open index.html in your browser
+
+Just double-click it or open with Live Server if using VS Code.
+
